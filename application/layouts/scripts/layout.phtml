@@ -1,0 +1,33 @@
+<!-- application/layouts/scripts/layout.phtml -->
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Zend Lehman Company</title>
+  <?php echo $this->headLink()->appendStylesheet('./css/cssLayout.css'); echo $this->headLink()->appendStylesheet('./css/default.css')  ?>
+</head>
+<body>
+    <div id="top" class="top" name="top">
+        <?php echo ("<h2 name =\"top\"> Welcome to Lehman Company </h2>");?>
+    </div>
+   <div id="left">
+                <h3> Useful Links </h3>
+                <ul>
+                    <li>
+                        <a href="<?php echo $this->url(array('controller'=>'showDepts'),'default', true) ?>">Show All Departments</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $this->url(array('controller'=>'showEmps'),'default', true) ?>">Show All Employees</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $this->url(array('controller'=>'showProjs'),'default', true) ?>">Show All Projects</a>
+                    </li>                   
+                </ul>
+            </div>
+            <div id="content" class="left_content">
+               <?php echo $this->layout()->content ?>
+            </div>
+        </div>  
+ 
+</body>
+</html>

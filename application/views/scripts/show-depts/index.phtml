@@ -1,0 +1,18 @@
+<h1>Show All Departments in Lehman Company</h1>
+<table>
+<thead>
+<tr>
+<th scope="col">Department Name</th>
+<th scope="col">Department Number</th>
+</tr>
+</thead>
+<tbody>
+    
+    <?php foreach ($this->entries as $entry): ?>
+        <tr><td><?php echo $this->escape($entry->dname) ?></td>
+           <td><a href="<?php echo $this->url(array('controller'=>'DeptView'),'default', true) ?>"><?php echo $this->escape($entry->dnumber) ?></a></td></tr>
+    <?php endforeach ?>
+</tbody>
+</table>
+    
+    
